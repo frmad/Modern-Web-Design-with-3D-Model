@@ -1,0 +1,493 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+/* Header styles */
+header {
+  position: absolute; /* Position the header absolutely */
+  width: 100%; /* Full width */
+  z-index: 10; /* Ensure it is on top of other elements */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #c7ff1b; /* Neon green for the logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: #c7ff1b; /* Neon hover effect */
+}
+
+/* Hero section */
+#hero {
+  position: relative; /* Needed to position the pseudo-element */
+  display: flex;
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  background-image: url('/backdrop3.jpg'); /* Correct syntax for background image */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  text-align: left; /* Left-align text */
+  padding: 40px; /* Increased padding for breathing space */
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1; /* Place it below the text */
+}
+
+#hero h1,
+#hero p,
+#cta-button {
+  position: relative; /* Ensure text is on top of the overlay */
+  z-index: 2; /* Bring text above the overlay */
+}
+
+#hero h1 {
+  font-size: 36px; /* Reduced font size for a more modern look */
+  margin: 0; /* Remove default margin */
+  color: #c7ff1b; /* Neon green headline */
+  margin-top: 20%;
+}
+
+#hero p {
+  font-size: 18px; /* Reduced font size */
+  margin-top: 3%; /* Space above the paragraph */
+  color: #ffffff;
+}
+
+/* Call-to-action button */
+#cta-button {
+  padding: 10px 20px;
+  background-color: #c7ff1b; /* Neon green for CTA button */
+  color: #000000; /* Black text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 3%;
+}
+
+#cta-button:hover {
+  background-color: #c6ff1bef; /* Slightly darker neon for hover */
+}
+
+/* Section styles */
+main section {
+  padding: 40px;
+  text-align: center;
+}
+
+
+#services,
+#testimonials {
+  background-color: #000000;
+  margin: 20px 0;
+}
+
+#services .service-card {
+  margin: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border: 1px solid #c7ff1b; /* Neon border for service cards */
+  border-radius: 8px;
+}
+
+.testimonials .testimonial {
+  margin: 20px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+/* Section styles */
+#contact {
+  position: relative; /* Set position relative for the pseudo-element */
+  height: 40%; /* Fixed height */
+  background-image: url('/lines4.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-color: #000; /* Optional fallback color */
+  overflow: hidden; /* Prevent overflow */
+  margin-top: -100px;
+}
+
+#contact::before {
+  content: '';
+  position: absolute; /* Position absolutely within #contact */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  backdrop-filter: blur(8px); /* Apply blur effect */
+  z-index: 1; /* Place it below the text */
+}
+
+/* Ensure that form and heading are on top */
+#contact h2,
+#contact form {
+  position: relative; /* Ensure they are positioned above the overlay */
+  z-index: 2; /* Bring them above the dark overlay */
+}
+
+/* Additional styles for the form and its elements */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 2; /* Ensure it's above the overlay */
+}
+
+#contact form input,
+#contact form textarea {
+  width: 300px;
+  padding: 10px;
+  background-color: #ffffff; /* White background for input fields */
+  color: #000000; /* Black text inside the input */
+  border: 2px solid #c7ff1b; /* Neon green border for input fields */
+  border-radius: 5px;
+}
+
+#contact h2 {
+  color: #c7ff1b; /* Ensure heading is visible */
+}
+
+#contact label {
+  align-self: flex-start; /* Align labels to the left */
+  margin-bottom: 5px; /* Add space below the label */
+  margin-left: 38%;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 300px;
+  padding: 10px;
+  background-color: #ffffff; /* White background for input fields */
+  color: #000000; /* Black text inside the input */
+  border: 2px solid #c7ff1b; /* Neon green border for input fields */
+  border-radius: 5px;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: none;
+  border-color: #c6ff1bb1; /* Darker neon on focus */
+}
+
+#contact form button {
+  padding: 10px 20px;
+  background-color: #c7ff1b;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contact form button:hover {
+  background-color: #c6ff1bb1;
+}
+
+/* Footer styles */
+footer {
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 15px;
+  margin-top: 0 !important; 
+  text-align: center;
+  font-size: 0.6em; /* Slightly smaller font for footer text */
+  border-top: 0.01rem solid #c7ff1b; /* Neon green border to separate footer */
+}
+
+footer p {
+  margin: 5px 0; /* Small margin between paragraphs */
+}
+
+footer a {
+  color: #c7ff1b; /* Neon green for links */
+  text-decoration: none; /* No underline for links */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+footer a:visited {
+  color: #9ea197; /* A different shade of green for visited links */
+  text-decoration: none; /* Keep no underline for visited links */
+}
+
+footer em {
+  font-style: italic; /* Italic for emphasis */
+}
+
+/* 3D model css */
+#container3D {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Section with background image */
+#image-section {
+  position: relative; /* Needed for absolute positioning of pseudo-element */
+  height: 80vh; /* Set height for the section */
+  margin-top: -15px;
+  background-image: url('/blackandwhite-flowers.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  display: flex; /* Center the text */
+  flex-direction: column; /* Stack the text vertically */
+  align-items: center; /* Center align the text */
+  justify-content: center; /* Center align the text vertically */
+  color: white; /* Default text color */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Pseudo-element for the frosted glass effect */
+#image-section::before {
+  content: '';
+  position: absolute; /* Position it absolutely within .image-section */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Aligns to the left */
+  width: 50%; /* Cover half the width */
+  height: 100%; /* Cover full height */
+  background: rgba(255, 255, 255, 0.3); /* Translucent white background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  z-index: 1; /* Layer it above the background but below text */
+}
+
+/* Ensure text is on top of the pseudo-element */
+#image-section h1,
+#image-section p {
+  position: relative; /* Bring text above the pseudo-element */
+  z-index: 2; /* Ensures the text is above the blur */
+  text-align: center; /* Center align text */
+}
+
+/* Normal text */
+.normal {
+  z-index: 2; /* Ensures this text is above the background */
+  color: white; /* Normal text color */
+}
+
+/* Frosted text */
+.frosted {
+  font-family: 'Poppins', sans-serif; /* Change to your desired font */
+  font-weight: 900;
+  font-size: 2.5vw; /* Responsive font size */
+  word-wrap: break-word; /* Handle long words */
+  -webkit-background-clip: text; /* Clip background to text */
+  background-image: url('/blackandwhite-flowers.jpg'); /* Use the same background image */
+  background-size: 200%; /* Scale background image for better effect */
+  background-position: left center; /* Align background image to the left center */
+  color: transparent; /* Hide the color */
+  margin: 0; /* Remove default margin */
+  -webkit-text-fill-color: transparent; /* Make the text color transparent */
+}
+
+/* Additional styles for the paragraph */
+#image-section p {
+  color: white; /* Default text color */
+  margin-top: 20px; /* Space above the paragraph */
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 100px;
+}
+.left, .right {
+  flex: 1;
+  position: relative;
+}
+
+.right-services {
+  flex: 1;
+  position: relative;
+  margin-right: 200px;
+}
+
+.container-services {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 0px;
+}
+
+.div-lines {
+  width: 100%; /* Set the width of the container to 100% */
+  height: auto;
+  overflow: hidden; /* Hide any overflow (optional) */
+  filter: blur(10px); /* Apply blur effect *
+}
+
+.lines {
+  width: 100%; /* Set the image width to 100% of its container */
+  height: auto; /* Maintain aspect ratio by automatically adjusting height */
+  display: block; /* Remove any space below the image */
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.795);
+  letter-spacing: 10px;
+  z-index: 2;
+}
+
+/* About Section */
+#about {
+  width: 100%; /* Ensure the section takes the full width of the viewport */
+  padding: 0px; /* Add padding for spacing */
+  background: rgba(0, 0, 0, 0.8); /* Optional: add a background color for contrast */
+}
+
+/* Container for about content */
+.container-about {
+  display: flex; /* Flex layout for the about content */
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-start; /* Align to the start (left) */
+  z-index: 2; /* Bring content above the background */
+  width: 100%; /* Full width of the container */
+  margin-top: -80px;
+}
+
+/* About card styling */
+.about-card {
+  /*background: rgba(255, 255, 255, 0.2); /* Light translucent background */
+  padding: 15px; /* Padding for card */
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 20px;
+  margin-bottom: 15px; /* Space between cards */
+  width: 100%; /* Full width of the container */
+  display: flex;
+  justify-content: space-around;
+  gap: 300px;
+  align-items: flex-start;
+}
+
+.about-right {
+  text-align: left;
+  width: 100%;  
+}
+
+.about-left h2 {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  z-index: 2;
+  transform: rotate(180deg); 
+  /*
+  transform: rotate(271deg); 
+  z-index: 2; 
+  font-size: 24px; 
+  color: #c7ff1b; 
+  margin: 20px 0; 
+  */
+}
+
+.about-left {
+  text-align: center;
+  width: 100%;
+}
+
+
+.about-card h2 {
+  margin: 20px; /* Remove default margin */
+  color: #c7ff1b; /* Headline color */
+}
+
+.about-right h3 {
+ 
+  color: #c7ff1b; /* Headline color */
+}
+
+.about-card p {
+  margin-top: 5px; /* Space above the paragraph */
+  color: #ffffff; /* Text color */
+}
+
+/* Image Section */
+#image-section {
+  position: relative;
+  height: 80vh; /* Set height for the section */
+  background-image: url('/blackandwhite-flowers.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center align the content vertically */
+  color: white; /* Default text color */
+}
+
+/* Flex container for the text */
+.container-tech {
+  display: flex; /* Enable flex layout */
+  justify-content: space-between; /* Space items evenly */
+  width: 100%; /* Full width */
+  z-index: 5; /* Ensure it's above background */
+}
+
+/* Left and Right text sections */
+.tech-left, .tech-right {
+  flex: 1; /* Each takes up equal space */
+  padding: 20px; /* Padding for breathing space */
+}
+
+/* Optional: Ensure text is aligned correctly */
+.tech-left {
+  text-align: left; /* Align left for this section */
+}
+
+.tech-right {
+  text-align: left; /* Align left for this section */
+}

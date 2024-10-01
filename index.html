@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Web Design Experiment</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">3D Web Experiment</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Technologies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section" id="hero">
+            <div class="container">
+                <div class="left">
+                    <h1>Exploring Modern Web Design with 3D Models</h1>
+                    <p>This site is a personal project built to experiment with cutting-edge web design practices, specifically focusing on using HTML, CSS, and JavaScript to integrate 3D models into web pages. The butterfly model you see here is powered by the Three.js library.</p>
+                    <button id="cta-button">Learn More</button>
+                </div>
+                <div class="right">
+                  <div class="vertical-text">ADVANCEMENT</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="divider"></section>
+
+        <!-- Placeholder Section -->
+        <!--<section class="image-section">
+            <h1>
+                <span class="frosted">Lorem Ipsum Dolor</span>
+                <span class="normal"> - Sit Amet Consectetur</span>
+            </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+        </section>-->
+
+        <!-- About Section -->
+        <section id="about" class="section">
+          <div class="container-about">
+              <div class="about-card">
+                <div class="about-left">
+                  <h2>About This Project</h2>
+                </div>
+                <div class="about-right">
+                  <h3>ABOUT</h3>
+                  <p>This website is an experiment to better understand modern web development techniques, with a focus on integrating interactive 3D models into user-friendly designs. Using technologies like Three.js, this project demonstrates how JavaScript libraries can enhance web visuals and interactions.</p>
+                </div>
+              </div>
+          </div>
+        </section>
+
+       <!-- Image Section -->
+        <section id="image-section" class="section">
+          <div class="container-tech">
+              <div class="tech-left">
+                  <h1>
+                      <span class="frosted">You do not just wake up and become the butterfly. Growth is a process</span>
+                      <span class="normal"> - Robert A. Heinlein</span>
+                  </h1>
+                  
+              </div>
+
+              <div class="tech-right">
+                  <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>-->
+              </div>
+          </div>
+        </section>
+
+
+        <!-- Technologies Section -->
+        <section id="services" class="section">
+            <div class="container-services">
+              <div class="left"></div>
+              <div class="right-services">
+                <h2>Technologies Used</h2>
+                <div class="service-card">
+                <h3>HTML, CSS & JavaScript</h3>
+                <p>The foundation of this project is built with standard web technologies: HTML for structure, CSS for styling, and JavaScript for interactivity and animation.</p>
+                </div>
+                <div class="service-card">
+                <h3>Three.js</h3>
+                <p>Three.js is used to load and animate the 3D butterfly model on this website, allowing for smooth rendering and responsive control.</p>
+                </div>
+                <div class="service-card">
+                  <h3>Web Development</h3>
+                  <p>This project emphasizes modern design practices, creating visually appealing and user-friendly interfaces that enhance the overall user experience.</p>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form id="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email" />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+  </form>
+</section>
+
+    </main>
+
+    <footer>
+      <p>© 2024, Created for learning and experimentation purposes.</p>
+        <p>
+            Butterfly model: <em><a href="https://skfb.ly/oELOS" target="_blank">Danaid Butterfly</a></em> by <a href="https://sketchfab.com/eb78" target="_blank">eb78</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike</a>.
+        </p>
+    </footer>
+
+    <script src="main.js"></script>
+    
+    <div id="container3D"></div>
+
+    <script type="module" src="3dModel.js"></script>
+</body>
+</html>
